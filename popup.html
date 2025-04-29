@@ -7,28 +7,36 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="p-4 font-sans text-white min-w-[400px] max-w-[500px]">
+<body class="p-4 font-sans min-w-[400px] max-w-[500px] bg-gradient-to-b from-blue-900 to-slate-900 text-white">
 
-    <h1 class="text-2xl font-bold mb-4 text-center">MultiTab GPT</h1>
+  <h1 class="text-2xl font-bold mb-4 text-center">MultiTab GPT</h1>
 
-    <div id="tabsList" class="bg-gray-900 p-2 rounded-lg max-h-40 overflow-y-auto mb-4">
-    </div>
+  <!-- Label before Tab List -->
+  <p class="text-sm mb-2 font-semibold text-gray-300">
+    Select Tabs to Summarize:
+  </p>
 
-    <button id="summarizeTabs" class="w-full bg-green-600 text-white py-2 rounded-lg mb-4 hover:bg-green-700">
-        Summarize Selected Tabs
-    </button>
+  <!-- Tabs List -->
+  <div id="tabsList" class="bg-gray-800 p-3 rounded-lg max-h-40 overflow-y-auto mb-4 border border-gray-600"></div>
 
-    <div id="output" class="bg-gray-100 text-gray-900 p-2 rounded-lg text-sm max-h-60 overflow-y-auto mb-4 hidden"></div>
+  <!-- Summarize Button -->
+  <button id="summarizeTabs" class="w-full bg-green-600 text-white py-2 rounded-lg mb-4 hover:bg-green-700 text-lg">
+    Summarize Selected Tabs
+  </button>
 
-    <div id="exportSection" class="flex gap-2 justify-between hidden">
-        <button id="copyBtn" class="flex-1 bg-gray-700 text-white py-2 rounded-lg hover:bg-gray-800">Copy</button>
-        <button id="txtBtn" class="flex-1 bg-gray-700 text-white py-2 rounded-lg hover:bg-gray-800">Download TXT</button>
-    </div>
+  <!-- Output -->
+  <div id="output" class="p-2 rounded-lg text-sm max-h-60 overflow-y-auto mb-4 hidden"></div>
 
-    <p id="status" class="text-center text-sm text-gray-300 mt-3"></p>
+  <!-- Export Buttons -->
+  <div id="exportSection" class="flex gap-2 justify-between hidden">
+    <button id="copyBtn" class="flex-1 bg-gray-700 text-white py-2 rounded-lg hover:bg-gray-800">Copy</button>
+    <button id="txtBtn" class="flex-1 bg-gray-700 text-white py-2 rounded-lg hover:bg-gray-800">Download TXT</button>
+  </div>
 
-    <script src="libs/FileSaver.min.js"></script>
-    <script src="utils.js"></script>
-    <script src="popup.js"></script>
-</body>
+  <p id="status" class="text-center text-sm text-gray-300 mt-3"></p>
+
+  <script src="libs/FileSaver.min.js"></script>
+  <script src="utils.js"></script>
+  <script src="popup.js"></script>
+
 </html>

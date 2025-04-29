@@ -79,7 +79,7 @@ summarizeBtn.addEventListener('click', async () => {
             });
 
             const content = result.result;
-            const summary = await summarizeWithHuggingface(content);
+            const summary = await summarizeWithGemini(content);
             const wordCount = countWords(summary);
 
             summaries.push({
